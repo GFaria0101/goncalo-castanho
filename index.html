@@ -6,11 +6,9 @@
     <title>Gonçalo Castanho | Psicologia da Performance Humana</title>
     <meta name="description" content="Especialista em Psicologia da Performance Humana com 19 anos de experiência transformando vidas e carreiras">
     
-    <!-- Pré-conexão para melhor performance -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Ícones -->
@@ -20,7 +18,18 @@
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* Prevent zoom on iOS inputs */
+        input, textarea, select {
+            font-size: 16px !important;
+        }
+        /* Remove tap highlight */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
 </head>
 <body>
     <!-- Cabeçalho -->
@@ -41,52 +50,65 @@
                 </ul>
                 
                 <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Carrossel Hero -->
-    <section class="hero">
-        <div class="hero-carousel">
+    <!-- Carrossel Hero Full-Page -->
+    <section class="hero-carousel">
+        <div class="hero-slides">
+            <!-- Slide 1 -->
             <div class="hero-slide active" style="background-image: url('assets/images/hero-1.jpg');">
+                <div class="slide-overlay"></div>
                 <div class="container">
                     <div class="hero-content">
-                        <h2 class="hero-title">MY PEOPLE ARE MY <span class="heart">HE<span>ART</span></span></h2>
+                        <h1 class="hero-title">MY PEOPLE ARE MY <span class="heart">HE<span>ART</span></span></h1>
                         <p class="hero-subtitle">As pessoas são a minha arte e paixão!</p>
-                        <a href="#contato" class="btn btn-primary">Agende uma consulta</a>
+                        <a href="#contato" class="btn btn-hero">Agende uma consulta</a>
                     </div>
                 </div>
             </div>
             
+            <!-- Slide 2 -->
             <div class="hero-slide" style="background-image: url('assets/images/hero-2.jpg');">
+                <div class="slide-overlay"></div>
                 <div class="container">
                     <div class="hero-content">
-                        <h2 class="hero-title">ESPECIALISTA EM PSICOLOGIA DA PERFORMANCE</h2>
+                        <h1 class="hero-title">ESPECIALISTA EM PSICOLOGIA DA PERFORMANCE</h1>
                         <p class="hero-subtitle">19 anos transformando vidas e carreiras</p>
-                        <a href="#sobre" class="btn btn-primary">Conheça minha trajetória</a>
+                        <a href="#sobre" class="btn btn-hero">Conheça minha trajetória</a>
                     </div>
                 </div>
             </div>
             
+            <!-- Slide 3 -->
             <div class="hero-slide" style="background-image: url('assets/images/hero-3.jpg');">
+                <div class="slide-overlay"></div>
                 <div class="container">
                     <div class="hero-content">
-                        <h2 class="hero-title">+80% ATINGEM SEUS MELHORES RESULTADOS</h2>
+                        <h1 class="hero-title">+80% ATINGEM SEUS MELHORES RESULTADOS</h1>
                         <p class="hero-subtitle">Taxa de sucesso comprovada</p>
-                        <a href="#resultados" class="btn btn-primary">Veja os resultados</a>
+                        <a href="#resultados" class="btn btn-hero">Veja os resultados</a>
                     </div>
                 </div>
             </div>
         </div>
         
+        <!-- Controles do Carrossel -->
         <div class="hero-controls">
             <button class="hero-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="hero-indicators"></div>
             <button class="hero-next"><i class="fas fa-chevron-right"></i></button>
         </div>
         
-        <div class="hero-indicators"></div>
+        <!-- Seta de scroll -->
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <!-- Seção Sobre -->
@@ -99,6 +121,14 @@
             </div>
             
             <div class="sobre-content">
+                <div class="sobre-image">
+                    <img src="assets/images/profile.jpg" alt="Gonçalo Castanho" class="profile-img">
+                    <div class="exp-badge">
+                        <span>19 anos</span>
+                        <span>Experiência</span>
+                    </div>
+                </div>
+                
                 <div class="sobre-text">
                     <p class="sobre-destaque">"As pessoas são a minha arte e a minha paixão!"</p>
                     
@@ -108,10 +138,6 @@
                     
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <span class="stat-number">19</span>
-                            <span class="stat-label">Anos de experiência</span>
-                        </div>
-                        <div class="stat-card">
                             <span class="stat-number">5000+</span>
                             <span class="stat-label">Horas de consulta</span>
                         </div>
@@ -119,14 +145,10 @@
                             <span class="stat-number">80%</span>
                             <span class="stat-label">Taxa de sucesso</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="sobre-image">
-                    <img src="assets/images/profile.jpg" alt="Gonçalo Castanho" class="profile-img">
-                    <div class="exp-badge">
-                        <span>19 anos</span>
-                        <span>Experiência</span>
+                        <div class="stat-card">
+                            <span class="stat-number">60+</span>
+                            <span class="stat-label">Entidades atendidas</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,9 +257,7 @@
                 </div>
                 
                 <div class="resultados-chart">
-                    <div class="chart-container">
-                        <canvas id="resultsChart"></canvas>
-                    </div>
+                    <canvas id="resultsChart"></canvas>
                 </div>
             </div>
         </div>
@@ -354,7 +374,7 @@
                     </div>
                 </div>
                 
-                <form class="contato-form">
+                <form class="contato-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
                     </div>
